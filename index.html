@@ -62,7 +62,26 @@ border: 1px solid red;
 <h2>This Site is Under Maintenance. will be back soon.</h2></center>
     <center><div class="mark2"><br>
               <P>Client Public IP :</p><h3><blink><p id="gfg"></p></blink> </h3>        
-        <p style="text-align:center;">This site will only be served over HTTPS</p><br></div></center><br>
+        <p style="text-align:center;">This site will only be served over HTTPS</p><br><button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script></div></center><br>
      <div class="mark1"> <p style="text-align:right;">developed and owned by Dwaraka</p></div>
 <br>
         </div>
