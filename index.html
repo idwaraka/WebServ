@@ -80,15 +80,22 @@ var x = document.getElementById("demo");
 </script><p style="text-align:center;">This site will only be served over HTTPS</p><br><br>
 </div></center><br>
      <div class="mark1"> <p style="text-align:right;">developed and owned by Dwaraka</p></div>
-<br>
-      <p id="demo1"></p>
+<br><div id="demo1"></div>
 
 <script>
-function myFunction() {
-  var x = "User-agent header sent: " + navigator.userAgent;
-  document.getElementById("demo1").innerHTML = x;
-}
-</script>  </div>
+var txt = "";
+txt += "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
+txt += "<p>Browser Name: " + navigator.appName + "</p>";
+txt += "<p>Browser Version: " + navigator.appVersion + "</p>";
+txt += "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
+txt += "<p>Browser Language: " + navigator.language + "</p>";
+txt += "<p>Browser Online: " + navigator.onLine + "</p>";
+txt += "<p>Platform: " + navigator.platform + "</p>";
+txt += "<p>User-agent header: " + navigator.userAgent + "</p>";
+
+document.getElementById("demo1").innerHTML = txt;
+</script>
+       </div>
  <center><script type="text/javascript" language="javascript">
       var aax_size='728x90';
       var aax_pubname = 'dwarakasdst-21';
