@@ -69,19 +69,20 @@ border: 1px solid red;
 <script>
 var x = document.getElementById("demo");
 
-function getLocation() {
+
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
+    navigator.geolocation.watchPosition(showPosition);
   } else { 
     x.innerHTML = "Geolocation is not supported by this browser.";
   }
-}
 
+    
 function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
+    x.innerHTML="Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
 }
-</script></div></center><br>
+</script>
+</div></center><br>
      <div class="mark1"> <p style="text-align:right;">developed and owned by Dwaraka</p></div>
 <br>
         </div>
