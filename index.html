@@ -1,108 +1,28 @@
+<!DOCTYPE html>
 <html>
 <head>
-
- <script data-ad-client="ca-pub-7113279323905408" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <title>ChillDude</title> 
-        <link rel="icon" href="wlogo.png" type="image/gif" sizes="76x76">
-       <script src= 
-"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> 
-    </script> 
-        
-        <script> 
-        /* Add "https://api.ipify.org?format=json" statement 
-           this will communicate with the ipify servers in 
-           order to retrieve the IP address $.getJSON will 
-           load JSON-encoded data from the server using a 
-           GET HTTP request */ 
-  
-        $.getJSON("https://api.ipify.org?format=json", 
-                                          function(data) { 
-  
-            // Setting text of element P with id gfg 
-            $("#gfg").html(data.ip); 
-        }) 
-    </script> 
-        <style>
-.mark{
-  width:720px;
-  margin: auto;
-border: 1px solid red;
-  border-radius: 20px;
-  background-color:#b3ffff;
-}
- .mark1{
-  width:650px;
-  margin: auto;
- 
-  
-}
-.mark2{
-  width:300px;
-  border-radius: 20px;
-  background-color:#ffe6e6;
-}
-</style>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>Geo City Locator</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
-<body><center><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- ChillDude1 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7113279323905408"
-     data-ad-slot="5226078854"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
- </center><br><div class="mark"><center> 
- 
- 
- 
- <br><h1>Thank You for Visiting..<br></h1>
-<h2>This Site is Under Maintenance. will be back soon.</h2></center>
-    <center><div class="mark2"><br>
-              <P>Client Public IP :</p><h3><blink><p id="gfg"></p></blink> </h3>
-<p>Client Location:</p>
-<h3><p id="demo"></p></h3>
-
-<script>
-var x = document.getElementById("demo");
-  if (navigator.geolocation) {
-    navigator.geolocation.watchPosition(showPosition);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-
-  function showPosition(position) {
-    x.innerHTML="Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude;
-}
-</script><p style="text-align:center;">This site will only be served over HTTPS</p><br><br>
-</div></center><br>
-     <div class="mark1"> <p style="text-align:right;">developed and owned by Dwaraka</p></div>
-<br><div id="demo1"></div>
-
-<script>
-var txt = "";
-
-txt += "<p>User-agent header: " + navigator.userAgent + "</p>";
-
-document.getElementById("demo1").innerHTML = txt;
-</script>
-       </div>
- <center><script type="text/javascript" language="javascript">
-      var aax_size='728x90';
-      var aax_pubname = 'dwarakasdst-21';
-      var aax_src='302';
+<body> 
+    <div>Country: <span id="country"></span></div>
+    <div>State: <span id="state"></span></div>
+    <div>City: <span id="city"></span></div>
+    <div>Latitude: <span id="latitude"></span></div>
+    <div>Longitude: <span id="longitude"></span></div>
+    <div>IP: <span id="ip"></span></div>
+    <script>
+      $.getJSON('https://geolocation-db.com/json/')
+         .done (function(location) {
+            $('#country').html(location.country_name);
+            $('#state').html(location.state);
+            $('#city').html(location.city);
+            $('#latitude').html(location.latitude);
+            $('#longitude').html(location.longitude);
+            $('#ip').html(location.IPv4);
+         });
     </script>
-    <script type="text/javascript" language="javascript" src="http://c.amazon-adsystem.com/aax2/assoc.js"></script>
-</center>
-
- <form action="/auth.php" method="post">
-  <input type="submit" value="Submit">
-</form>
- 
- 
-  <body>
-
+</body>
 </html>
