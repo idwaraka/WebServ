@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 15%;
+  background-color: #6bc5a1;
+  position: fixed;
+  height:1000px;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #538dcb;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color:#538dcb;
+  color: white;
+}
+table {
+  font-family: arial, sans-serif;
+
+  width: 100%;
+}
+
+td, th {
+
+  text-align: left;
+ 
+}
+.lamo{
+  width:250px;
+  margin: auto;
+  border: 1px solid #528dca;
+padding: 10px;
+border-radius: 5px;
+}
+.watermarked{
+  background-image: url("D:\dwaraka\logo.png");
+  position: relative;
+  left: 30px;
+  opacity: 0.5;
+}
+</style>
+</head>
+<body>
+
+<ul>
+<li><a href="inx.html" target="mids">In Box</a></li>
+  <li><a href="res.html" target="mids">Post Resume</a></li>
+  <li><a href="#contact">Update Resume</a></li>
+<li><a href="cpi.html" target="mids">Change Personal Infromation</a></li>
+  <li><a href="cp.html" target="mids">Change password</a></li>
+<li><a class="active" href="fed.html" target="mids">Feedback</a></li>
+<li><a href="jbs.html">View Jobs</a></li>
+<li><a href="#about">FAQ's</a></li>
+
+</ul>
+
+<div style="margin-left:21%;padding:1px 16px;height:auto;"><h1>Give Us Your FeedBack</h1><br>
+<from> <input type="text" id="fname" name="fname" size="50">
+<input type="submit" value="send" name="sn">
+</div>
+
+</body>
+</html>

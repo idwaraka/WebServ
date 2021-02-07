@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  margin: 0;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 15%;
+  background-color: #6bc5a1;
+  position: fixed;
+  height:1000px;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #538dcb;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color:#538dcb;
+  color: white;
+
+}
+table, th, td {
+  border: 1px solid black;
+  
+ width:250px;
+}
+td {
+  padding: 15px;
+}
+.lamo{
+  width:700px;
+  margin: auto;
+  
+padding: 10px;
+
+}
+.watermarked{
+  background-image: url("D:\dwaraka\logo.png");
+  position: relative;
+  left: 30px;
+  opacity: 0.5;
+}
+</style>
+</head>
+<body>
+
+
+<ul>
+<li><a href="inx.html" target="mids">In Box</a></li>
+  <li><a href="res.html" target="mids">Post Resume</a></li>
+  <li><a href="#contact">Update Resume</a></li>
+<li><a href="cpi.html" target="mids">Change Personal Infromation</a></li>
+  <li><a href="cp.html" target="mids">Change password</a></li>
+<li><a href="fed.html" target="mids">Feedback</a></li>
+<li><a href="jbs.html">View Jobs</a></li>
+<li><a href="#about">FAQ's</a></li>
+
+</ul>
+
+<div style="margin-left:21%;padding:1px 16px;height:;"><center>
+<h2>Click on the "Choose File" button to upload a <u>Resume</u>:</h2>
+
+<form action="/action_page.php">
+  <input type="file" id="myFile" name="filename">
+  <input type="submit">
+</form></center>
+</div>
+
+</body>
+</html>
